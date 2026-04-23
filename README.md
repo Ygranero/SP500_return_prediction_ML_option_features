@@ -68,3 +68,12 @@ This project investigates whether **Machine Learning models combined with forwar
   - arch (GARCH)
   - matplotlib / seaborn
   - shap
+
+## Takeaways
+  - Financial markets exhibit **nonlinear patterns** that Machine Learning models capture better
+  - Option market data provides **forward-looking information**
+  - Proper validation (timeseries Cross-Validation) is critical in finance applications
+
+## Author
+Yared Granero
+MSc in Applied Data Science for Banking and Finance
