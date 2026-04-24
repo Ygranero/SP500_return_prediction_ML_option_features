@@ -1,33 +1,46 @@
-# S&P 500 Return Prediction using Machine Learning and Option Market Features
+# S&P 500 Return Prediction with Machine Learning & Option Market Data
 
-This repository contains my Master's thesis roject focused on predicting short-term S&P 500 returns using Machine Learning models and option market data.
+Machine Learning pipeline to predict short-term S&P 500 returns using option market signals and time series modeling.
 
-## Highlights
-  - Developed and compared **Machine Learning models (Random Forest, XGBoost)** with **statistical models (ARIMA, GARCH, Linear Regression)**
-  - Used **option market variables** (implied volatility, put/call ratio, SKEW index) as predictive features
-  - Implemented **time-series cross-validation** to avpid look-ahead bias
-  - Evaluated models using:
-      - MAE, RMSE
-      - Directional Accuracy
-      - Diebold-MAriano test (statistical comparison of forecasts)
-  - Performed **feature importance analysis using SHAP**
+## Business Impact 
+  - Improved predictive performance vs statistical models (ARIMA, GARCH).
+  - Captured nonlinear relationships in financial markets using Machine Learning.
+  - Demonstrated the predictive value of forward-looking option data.
+  - Built a realistic forecasting framework.
+
+## Problem
+Short-term stock market predictions is notoriously difficult due to:
+  - High noise
+  - Nonlinearity
+  - Regime changes
+
+
+## Models Compared
+|       Type         |           Models                 |
+|--------------------|----------------------------------|
+| Statistical        | Linear Regression, ARIMA, GARCH  |
+| Machine Learning   | Random Forest, XGBoost           |
+
 
 ## Results
-  - Machine learning models **outperformed statistical models**
-  - Random Forest achieved the **best overall predictive performance**
-  - Option-based variables (especially volatility measures) showed **better predictive power**
-  - Performance remained robust across **different market regimes (low/high volatility)**
+  - **Random Forest achieved best overall performance.**
+  - ML models showed **lower prediction error** than statistical models.
+  - **Volatility-based features (VIX, IV)** were strongest predictors.
+  - Performance remained robust across **market regimes.**
+    
 
-## Problem Statement
-Short-term return prediction in financial markets is challenging due to noise and nonlinearity.
-This project investigates whether **Machine Learning models combined with forward-looking option data** can improve predictive performance.
+## Insights
+  - Financial markets contain **nonlinear patterns** → ML advantage.
+  - Option market variables provide **forward-looking signals**.
+  - Traditional models struggle in **high volatility periods**.
+    
 
 ## Data
   - Source: Bloomberg
   - Period: 2019 - 2024
-  - Frquency: Daily
+  - Frequency: Daily
 
-### Features:
+### Features
   - Return lags (1d, 5d, 10d)
   - Trading volume
   - Put/Call ratio
@@ -38,16 +51,6 @@ This project investigates whether **Machine Learning models combined with forwar
 ### Target:
   - 5-day forward return (log returns)
 
-## Models Implemented
-
-### Benchmark Models
-  - Linear Regression
-  - ARIMA
-  - GARCH (1,1)
-
-### Machine Learning Models
-  - Random Forest
-  - -XGBoost
 
 ## Evaluation Metrics
   - Mean Absolute Error (MAE)
@@ -55,24 +58,20 @@ This project investigates whether **Machine Learning models combined with forwar
   - Directional Accuracy
   - Diebold-Mariano test
 
-## Model Interpretation
-  - Feature importance (tree-based models)
-  - SHAP valuea for explainability
+
+## Explainability
+  - Feature importance.
+  - SHAP values
+
 
 ## Tech Stack
-  - Python
-  - pandas, numpy
+  - Python (pandas, numpy)
   - scikit-learn
   - xgboost
   - statsmodels
   - arch (GARCH)
   - matplotlib / seaborn
   - shap
-
-## Takeaways
-  - Financial markets exhibit **nonlinear patterns** that Machine Learning models capture better
-  - Option market data provides **forward-looking information**
-  - Proper validation (timeseries Cross-Validation) is critical in finance applications
 
 ## Author
 Yared Granero
